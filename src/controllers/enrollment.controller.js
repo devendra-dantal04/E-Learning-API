@@ -2,6 +2,8 @@ import sql from "../config/db.js";
 import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
+import emailTemplates from "../utils/emailTemplate.js";
+import { sendEmail } from "../utils/services/email.services.js";
 
 export const enrollCourse = asyncHandler(async (req, res) => {
   // Extracting course id from the params
@@ -26,6 +28,16 @@ export const enrollCourse = asyncHandler(async (req, res) => {
   const enrollmentQuery = sql`INSERT INTO enrollments(user_id, course_id) VALUES(${req.user.id}, ${courseId})`;
 
   const enrollmentRes = await enrollmentQuery;
+
+  // Prepare email options
+  const option = {
+    to: req.user.email,
+    subject: "Thank you for course enrollment",
+    text: emailTemplates.enrollment(),
+  };
+
+  // Send email
+  await sendEmail(option);
 
   return res
     .status(200)
