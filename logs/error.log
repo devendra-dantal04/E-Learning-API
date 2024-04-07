@@ -1,3 +1,13 @@
 2024-04-07T08:56:54.732Z [ERROR]: An error occurred: Invalid credentials
 2024-04-07T09:10:13.909Z [ERROR]: An error occurred: Invalid Credentials.
 2024-04-07T09:12:10.335Z [ERROR]: An error occurred: Email already exists.
+2024-04-07T11:50:31.965Z [ERROR]: Error in User Middleware
+2024-04-07T11:50:31.969Z [ERROR]: An error occurred: Unauthorized request
+2024-04-07T11:51:14.057Z [ERROR]: Error in User Middleware
+2024-04-07T11:51:14.058Z [ERROR]: An error occurred: Unauthorized request
+2024-04-07T11:51:17.013Z [ERROR]: Error in User Middleware
+2024-04-07T11:51:17.015Z [ERROR]: An error occurred: Unauthorized request
+2024-04-07T11:51:25.025Z [ERROR]: Error in User Middleware
+2024-04-07T11:51:25.026Z [ERROR]: An error occurred: Unauthorized request
+2024-04-07T11:52:17.323Z [ERROR]: Error in User Middleware
+2024-04-07T11:52:17.325Z [ERROR]: An error occurred: Unauthorized request

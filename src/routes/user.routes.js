@@ -21,7 +21,7 @@ router.route("/register").post(upload.single("profile_picture"), registerUser);
 router.route("/login").post(loginUser);
 router.route("/refresh-token").post(refreshAccessToken);
 router.route("/reset-password").post(resetPassword);
-router.route("/reset-password/:resetToken").get(updatePassword);
+router.route("/reset-password/:resetToken").post(updatePassword);
 
 // Protected Routes
 router.route("/update").post(isUser, updateAccountDetails);

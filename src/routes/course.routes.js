@@ -21,7 +21,7 @@ router.route("/:id").delete(isAdmin, removeCourse);
 router.route("/:id").put(isAdmin, updateCourse);
 
 // Enrollment routes
-router.route("/:id").post(isUser, enrollCourse);
+router.route("/:id/enroll").post(isUser, enrollCourse);
 router.route("/enrolled-course").get(isUser, getEnrolledCourses);
 
 export default router;
