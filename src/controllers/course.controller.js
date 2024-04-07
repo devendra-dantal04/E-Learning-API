@@ -65,7 +65,7 @@ export const getCourses = asyncHandler(async (req, res) => {
     }
 
     if (duration) {
-      filters = sql`${filters} AND duration = ${duration}`;
+      filters = sql`${filters} AND duration <= ${duration}`;
     }
 
     if (category) {

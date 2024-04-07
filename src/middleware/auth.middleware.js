@@ -2,6 +2,7 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 import jwt from "jsonwebtoken";
 import sql from "../config/db.js";
 import { ApiError } from "../utils/ApiError.js";
+import logger from "../utils/logger.js";
 
 export const isUser = asyncHandler(async (req, res, next) => {
   try {
@@ -25,6 +26,7 @@ export const isUser = asyncHandler(async (req, res, next) => {
     req.user = userQueryRes[0];
     next();
   } catch (error) {
+    logger.error("Error in User Middleware");
     throw new ApiError(401, error?.message || "Invalid access token");
   }
 });
@@ -55,6 +57,7 @@ export const isAdmin = asyncHandler(async (req, res, next) => {
 
     next();
   } catch (error) {
+    logger.error("Error in Admin Middleware");
     throw new ApiError(401, error?.message || "Invalid access token");
   }
 });
