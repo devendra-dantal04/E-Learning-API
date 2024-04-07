@@ -1,2 +1,7 @@
 2024-04-07T08:56:53.435Z [INFO]: Received POST request to /api/v1/users/update-password
 2024-04-07T08:56:54.732Z [ERROR]: An error occurred: Invalid credentials
+2024-04-07T09:10:12.721Z [INFO]: Received POST request to /api/v1/users/login
+2024-04-07T09:10:13.909Z [ERROR]: An error occurred: Invalid Credentials.
+2024-04-07T09:12:09.975Z [INFO]: Received POST request to /api/v1/users/register
+2024-04-07T09:12:10.335Z [ERROR]: An error occurred: Email already exists.
+2024-04-07T09:15:45.866Z [INFO]: Received POST request to /api/v1/users/register
