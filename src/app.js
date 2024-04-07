@@ -18,6 +18,13 @@ app.use(cookieParser());
 
 import userRouter from "./routes/user.routes.js";
 import courseRouter from "./routes/course.routes.js";
+import logger from "./utils/logger.js";
+
+// Logging middleware
+app.use((req, res, next) => {
+  logger.info(`Received ${req.method} request to ${req.path}`);
+  next();
+});
 
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/courses", courseRouter);

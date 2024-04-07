@@ -1,0 +1,2 @@
+2024-04-07T08:56:53.435Z [INFO]: Received POST request to /api/v1/users/update-password
+2024-04-07T08:56:54.732Z [ERROR]: An error occurred: Invalid credentials
